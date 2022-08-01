@@ -14,7 +14,7 @@ if (config.isProduction) {
     }
   }
 }
-const sequelize = new Sequelize(dataBaseConfig.dbUrl, options); 
+const sequelize = new Sequelize(dataBaseConfig.dataBaseUrl, options); 
 modelsConfig(sequelize);
 
 module.exports = sequelize;

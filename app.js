@@ -4,7 +4,7 @@ const {apiConfig} = require('./config/config');
 const routerApi = require('./routes/router-api');
 const { logErrors, errorHandler, boomErrorHandler, ormErrorHandler } = require('./middleware/error-handler');
 const { checkApiKey }  = require('./middleware/auth-handler');
-require('./auth/passport');
+require('./domain/authentication/main');
 
 const app = express();
 const whiteList = ['http://127.0.0.1:5500','https://www.facebook.com'];

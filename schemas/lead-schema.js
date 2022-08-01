@@ -28,9 +28,10 @@ const LeadSchema = {
     allowNull: false,
     type: DataTypes.STRING
   },
-  active: {
+  isActive: {
     allowNull: false,
     type: DataTypes.BOOLEAN,
+    field: 'is_active',
     defaultValue: true
   },
   createAt: {
@@ -43,8 +44,7 @@ const LeadSchema = {
 
 class Lead extends Model {
 /*   static associate(models){
-  }
-*/
+  } */
   static config(sequelize){
     return {
       sequelize,

@@ -1,5 +1,5 @@
 const Strategy = require('passport-local').Strategy;
-const authService = require('../../services/auth-service');
+const authentication = require('../main');
 
 const optionsStrategy = {
   usernameField: 'email',
@@ -10,7 +10,7 @@ const localStrategy = new Strategy(
   optionsStrategy, 
   async (email, password, done) => {
   try {
-    done(null, await authService.login(email, password))
+    done(null, await authentication.login(email, password))
   } catch (error) {
     done(error, false)
   }

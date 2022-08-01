@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const {emailConfig} = require('../../config/config');
+const {emailConfig} = require('../../../config/config');
 // private
   const transport = nodemailer.createTransport({
     host: emailConfig.magicHost,

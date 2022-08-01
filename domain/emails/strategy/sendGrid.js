@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail');
-const {emailConfig} = require('../../config/config');
-const {stringToArray} = require('../../utils/helper-util');
+const {emailConfig} = require('../../../config/config');
+const {stringToArray} = require('../../../utils/helper-util');
 
 //private
 const transport = sgMail.setApiKey(emailConfig.sendGridApiKey);

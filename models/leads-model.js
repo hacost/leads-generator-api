@@ -7,7 +7,7 @@ class LeadsService {
 
   async findAll(){
     const res = await models.Lead.findAll({
-      where: { active: true } 
+      where: { isActive: true } 
     });
     return res;
   }
@@ -39,4 +39,4 @@ class LeadsService {
 
 }
 
-module.exports = LeadsService;
+module.exports = new LeadsService();
